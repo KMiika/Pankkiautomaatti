@@ -5,12 +5,14 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = bankSimul
 TEMPLATE = app
 LIBS +="C:\BankSimul\build-bankSimul-Desktop_Qt_5_9_1_MinGW_32bit-Debug\debug\BankLibrary.dll"
+LIBS +="C:\BankSimul\build-bankSimul-Desktop_Qt_5_9_1_MinGW_32bit-Debug\debug\DBConnect.dll"
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked as deprecated (the exact warnings
@@ -33,7 +35,9 @@ HEADERS += \
     banklibrary.h \
     banklibrary_global.h \
     headers/banklibrary.h \
-    headers/banklibrary_global.h
+    headers/banklibrary_global.h \
+    headers/dbconnect.h \
+    headers/dbconnect_global.h
 
 FORMS += \
         banksimulmainwindow.ui

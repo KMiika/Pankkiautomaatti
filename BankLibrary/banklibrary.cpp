@@ -7,5 +7,14 @@ BankLibrary::BankLibrary()
 
 void BankLibrary::saldoPainettu()
 {
-    qDebug()<<"saldoPainettu";
+
+}
+void BankLibrary::katteenTarkistus()
+{
+
+}
+
+void BankLibrary::nostoSummanValinta(int value)
+{
+    veloitaSumma = value;
 }

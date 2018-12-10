@@ -10,6 +10,11 @@ class BANKLIBRARYSHARED_EXPORT BankLibrary
 public:
     BankLibrary();
     void saldoPainettu();
+    void katteenTarkistus();
+    void nostoSummanValinta(int value);
+
+    int veloitaSumma;
+    int value;
 };
 
 #endif // BANKLIBRARY_H

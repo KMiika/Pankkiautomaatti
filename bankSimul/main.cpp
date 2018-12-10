@@ -1,6 +1,7 @@
 #include "banksimulmainwindow.h"
 #include <QApplication>
 #include "headers/banklibrary.h"
+#include "headers/dbconnect.h"
 
 int main(int argc, char *argv[])
 {
@@ -10,6 +11,7 @@ int main(int argc, char *argv[])
 
     BankLibrary bLib;
     bLib.saldoPainettu();
+   // bLib.katteenTarkistus();
 
     return a.exec();
 }

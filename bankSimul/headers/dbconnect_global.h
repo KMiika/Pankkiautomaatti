@@ -1,0 +1,12 @@
+#ifndef DBCONNECT_GLOBAL_H
+#define DBCONNECT_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(DBCONNECT_LIBRARY)
+#  define DBCONNECTSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define DBCONNECTSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // DBCONNECT_GLOBAL_H
