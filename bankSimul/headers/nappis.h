@@ -3,12 +3,13 @@
 
 #include "nappis_global.h"
 #include "nappisform.h"
+#include "ui_nappisform.h"
 
 class NAPPISSHARED_EXPORT Nappis
 {
 
 private:
-    NappisForm *NappisOlio;
+    Ui_NappisForm *NappisOlio;
 
 public:
     Nappis();
