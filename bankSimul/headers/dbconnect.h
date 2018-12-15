@@ -47,6 +47,8 @@ public:
     QSqlQueryModel* haeTilitapahtumat();
     //Palauttaa tilillä olevan saldon.
     double getSaldo();
+    //Tarkastaa käyttäjän Pin-koodin.
+    bool tarkistaKortinPin();
 
 
     //---------------------------------------------
@@ -68,6 +70,10 @@ private:
     QString tiliNro;
     QString kortinNro; //0B003254CB / abcde12345
     int pinKoodi;
+
+public slots:
+    void vastaanotaPin(int value);
+    void vastaanotaKNro(QString value);
 };
 
 #endif // DBCONNECT_H
