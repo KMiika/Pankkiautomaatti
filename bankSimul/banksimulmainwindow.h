@@ -7,6 +7,7 @@
 #include "headers/banklibrary.h"
 #include "headers/nappis.h"
 #include "headers/rfiddll.h"
+#include "headers/ui_nappisform.h"
 #include <qtimer.h>
 
 
@@ -29,6 +30,7 @@ private:
     DBConnect *dbYhteys;
     BankLibrary *nostonValinta;
     NappisForm *Nappaimisto;
+    Ui_NappisForm *NM;
     RfidDLL *RFID;
 
     unsigned int aikaaJaljella = 20;

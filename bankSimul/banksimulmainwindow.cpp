@@ -3,6 +3,7 @@
 #include "banksimulmainwindow.h"
 #include "ui_banksimulmainwindow.h"
 #include "headers/dbconnect.h"
+#include "headers/ui_nappisform.h"
 
 
 bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
@@ -24,6 +25,7 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
     //timer
     timer = new QTimer(this);
     this->connect(timer, SIGNAL(timeout()), this, SLOT(paivitaAika()));
+    //connect(RFID,SIGNAL(lahetaCardSerialNumber(QString)),dbYhteys, SLOT(vastaanotaKNro(QString)));
    // this->connect(ui->pushButtonKirjauduUlos4_1, SIGNAL(clicked()), this, SIGNAL(kirjauduUlos()));
    //timer->start(1000);
 }
