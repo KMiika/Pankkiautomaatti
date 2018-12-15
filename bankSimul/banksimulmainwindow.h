@@ -2,8 +2,13 @@
 #define BANKSIMULMAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtCore>
 #include "headers/dbconnect.h"
-#include "headers/dbconnect_global.h"
+#include "headers/banklibrary.h"
+#include "headers/nappis.h"
+#include "headers/rfiddll.h"
+#include <qtimer.h>
+
 
 namespace Ui {
 class bankSimulMainWindow;
@@ -16,10 +21,23 @@ class bankSimulMainWindow : public QMainWindow
 public:
     explicit bankSimulMainWindow(QWidget *parent = 0);
     ~bankSimulMainWindow();
+    // void alustaTimer();
+
 
 private:
     Ui::bankSimulMainWindow *ui;
     DBConnect *dbYhteys;
+    BankLibrary *nostonValinta;
+    NappisForm *Nappaimisto;
+    RfidDLL *RFID;
+
+    unsigned int aikaaJaljella = 20;
+    QTimer * timer;
+
+
+public slots:
+    void Timer();
+    void paivitaAika();
 
 private slots:
     void on_pushButton_2_KirjauduSisaan_clicked();
@@ -38,6 +56,12 @@ private slots:
     void on_pushButton_5_80e_clicked();
     void on_pushButton_6_100e_clicked();
     void on_pushButton_7_MuuSumma_clicked();
+    void on_pushButton_Peruuta_P4_1_clicked();
+
+    void on_pushButtonKirjauduUlos4_1_clicked();
+
+signals:
+    void kirjauduUlos();
 };
 
 #endif // BANKSIMULMAINWINDOW_H

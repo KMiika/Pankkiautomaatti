@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>531</height>
+    <height>541</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,7 +36,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="page1">
      <property name="minimumSize">
@@ -48,9 +48,9 @@
      <widget class="QLabel" name="labelTextSyotaKortti">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>180</x>
         <y>80</y>
-        <width>341</width>
+        <width>441</width>
         <height>91</height>
        </rect>
       </property>
@@ -71,9 +71,9 @@
      <widget class="QLabel" name="labelTervetuloa">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>260</x>
         <y>0</y>
-        <width>211</width>
+        <width>251</width>
         <height>61</height>
        </rect>
       </property>
@@ -149,9 +149,9 @@
      <widget class="QLabel" name="labelLogoRahamaatti">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>260</x>
         <y>10</y>
-        <width>201</width>
+        <width>261</width>
         <height>41</height>
        </rect>
       </property>
@@ -172,9 +172,9 @@
      <widget class="QPushButton" name="pushButtonNostaRahaa">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>340</x>
         <y>100</y>
-        <width>111</width>
+        <width>131</width>
         <height>23</height>
        </rect>
       </property>
@@ -185,9 +185,9 @@
      <widget class="QPushButton" name="pushButtonNaytaSaldo">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>340</x>
         <y>160</y>
-        <width>111</width>
+        <width>131</width>
         <height>23</height>
        </rect>
       </property>
@@ -198,9 +198,9 @@
      <widget class="QPushButton" name="pushButtonNaytaTilitapahtumat">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>340</x>
         <y>220</y>
-        <width>111</width>
+        <width>131</width>
         <height>23</height>
        </rect>
       </property>
@@ -211,9 +211,9 @@
      <widget class="QPushButton" name="pushButtonKirjauduUlos">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>340</x>
         <y>340</y>
-        <width>111</width>
+        <width>131</width>
         <height>23</height>
        </rect>
       </property>
@@ -232,9 +232,9 @@
      <widget class="QLabel" name="labelLogoRahamaatti_2">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>260</x>
         <y>10</y>
-        <width>201</width>
+        <width>261</width>
         <height>41</height>
        </rect>
       </property>
@@ -255,8 +255,8 @@
      <widget class="QLabel" name="labelLogoTilinSaldo">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>70</y>
+        <x>330</x>
+        <y>60</y>
         <width>131</width>
         <height>21</height>
        </rect>
@@ -276,11 +276,16 @@
      <widget class="QLabel" name="labelTilinSaldoTiedot">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>120</y>
+        <x>250</x>
+        <y>110</y>
         <width>321</width>
         <height>61</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
       </property>
       <property name="text">
        <string/>
@@ -310,9 +315,9 @@
      <widget class="QLabel" name="labelLogoRahamaatti_3">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>260</x>
         <y>10</y>
-        <width>201</width>
+        <width>261</width>
         <height>41</height>
        </rect>
       </property>
@@ -463,9 +468,9 @@
      <widget class="QLabel" name="labelLogoRahamaatti_4">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>260</x>
         <y>10</y>
-        <width>201</width>
+        <width>261</width>
         <height>41</height>
        </rect>
       </property>
@@ -486,10 +491,10 @@
      <widget class="QLabel" name="label_2LogoTilitapahtumat">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>60</y>
-        <width>181</width>
-        <height>31</height>
+        <x>280</x>
+        <y>50</y>
+        <width>211</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -499,19 +504,6 @@
       </property>
       <property name="text">
        <string>Tilitapahtumat</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_3_Tilitapahtumat">
-      <property name="geometry">
-       <rect>
-        <x>260</x>
-        <y>110</y>
-        <width>341</width>
-        <height>301</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_Peruuta_P5">
@@ -527,14 +519,24 @@
        <string>Peruuta</string>
       </property>
      </widget>
+     <widget class="QTableView" name="tableViewTilitapahtumat">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>100</y>
+        <width>581</width>
+        <height>291</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page6">
      <widget class="QLabel" name="labelLogoRahamaatti_5">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>260</x>
         <y>10</y>
-        <width>201</width>
+        <width>261</width>
         <height>41</height>
        </rect>
       </property>
@@ -555,9 +557,9 @@
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>280</x>
         <y>60</y>
-        <width>181</width>
+        <width>231</width>
         <height>31</height>
        </rect>
       </property>
@@ -588,9 +590,9 @@
      <widget class="QLabel" name="labelLogoRahamaatti_6">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>260</x>
         <y>10</y>
-        <width>201</width>
+        <width>261</width>
         <height>41</height>
        </rect>
       </property>
@@ -626,6 +628,50 @@
        <string/>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_Peruuta_P4_1">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>400</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Paluu</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonKirjauduUlos4_1">
+      <property name="geometry">
+       <rect>
+        <x>374</x>
+        <y>400</y>
+        <width>101</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kirjaudu Ulos</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelLaskuriKirjauduUlos">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>250</y>
+        <width>221</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -635,7 +681,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

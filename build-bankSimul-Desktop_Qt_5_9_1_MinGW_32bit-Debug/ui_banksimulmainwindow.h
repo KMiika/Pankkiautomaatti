@@ -20,6 +20,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -60,8 +61,8 @@ public:
     QWidget *page5;
     QLabel *labelLogoRahamaatti_4;
     QLabel *label_2LogoTilitapahtumat;
-    QLabel *label_3_Tilitapahtumat;
     QPushButton *pushButton_Peruuta_P5;
+    QTableView *tableViewTilitapahtumat;
     QWidget *page6;
     QLabel *labelLogoRahamaatti_5;
     QLabel *label_2;
@@ -69,6 +70,9 @@ public:
     QWidget *page4_1;
     QLabel *labelLogoRahamaatti_6;
     QLabel *label_NostitRahaa;
+    QPushButton *pushButton_Peruuta_P4_1;
+    QPushButton *pushButtonKirjauduUlos4_1;
+    QLabel *labelLaskuriKirjauduUlos;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -77,7 +81,7 @@ public:
     {
         if (bankSimulMainWindow->objectName().isEmpty())
             bankSimulMainWindow->setObjectName(QStringLiteral("bankSimulMainWindow"));
-        bankSimulMainWindow->resize(800, 531);
+        bankSimulMainWindow->resize(800, 541);
         centralWidget = new QWidget(bankSimulMainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         centralWidget->setMinimumSize(QSize(800, 480));
@@ -90,7 +94,7 @@ public:
         page1->setMinimumSize(QSize(800, 480));
         labelTextSyotaKortti = new QLabel(page1);
         labelTextSyotaKortti->setObjectName(QStringLiteral("labelTextSyotaKortti"));
-        labelTextSyotaKortti->setGeometry(QRect(250, 80, 341, 91));
+        labelTextSyotaKortti->setGeometry(QRect(180, 80, 441, 91));
         QFont font;
         font.setPointSize(22);
         font.setBold(true);
@@ -99,7 +103,7 @@ public:
         labelTextSyotaKortti->setAlignment(Qt::AlignCenter);
         labelTervetuloa = new QLabel(page1);
         labelTervetuloa->setObjectName(QStringLiteral("labelTervetuloa"));
-        labelTervetuloa->setGeometry(QRect(320, 0, 211, 61));
+        labelTervetuloa->setGeometry(QRect(260, 0, 251, 61));
         labelTervetuloa->setFont(font);
         labelTervetuloa->setAlignment(Qt::AlignCenter);
         labelPinKoodi = new QLabel(page1);
@@ -125,33 +129,33 @@ public:
         page2->setMinimumSize(QSize(800, 480));
         labelLogoRahamaatti = new QLabel(page2);
         labelLogoRahamaatti->setObjectName(QStringLiteral("labelLogoRahamaatti"));
-        labelLogoRahamaatti->setGeometry(QRect(320, 10, 201, 41));
+        labelLogoRahamaatti->setGeometry(QRect(260, 10, 261, 41));
         labelLogoRahamaatti->setFont(font);
         labelLogoRahamaatti->setAlignment(Qt::AlignCenter);
         pushButtonNostaRahaa = new QPushButton(page2);
         pushButtonNostaRahaa->setObjectName(QStringLiteral("pushButtonNostaRahaa"));
-        pushButtonNostaRahaa->setGeometry(QRect(360, 100, 111, 23));
+        pushButtonNostaRahaa->setGeometry(QRect(340, 100, 131, 23));
         pushButtonNaytaSaldo = new QPushButton(page2);
         pushButtonNaytaSaldo->setObjectName(QStringLiteral("pushButtonNaytaSaldo"));
-        pushButtonNaytaSaldo->setGeometry(QRect(360, 160, 111, 23));
+        pushButtonNaytaSaldo->setGeometry(QRect(340, 160, 131, 23));
         pushButtonNaytaTilitapahtumat = new QPushButton(page2);
         pushButtonNaytaTilitapahtumat->setObjectName(QStringLiteral("pushButtonNaytaTilitapahtumat"));
-        pushButtonNaytaTilitapahtumat->setGeometry(QRect(360, 220, 111, 23));
+        pushButtonNaytaTilitapahtumat->setGeometry(QRect(340, 220, 131, 23));
         pushButtonKirjauduUlos = new QPushButton(page2);
         pushButtonKirjauduUlos->setObjectName(QStringLiteral("pushButtonKirjauduUlos"));
-        pushButtonKirjauduUlos->setGeometry(QRect(360, 340, 111, 23));
+        pushButtonKirjauduUlos->setGeometry(QRect(340, 340, 131, 23));
         stackedWidget->addWidget(page2);
         page3 = new QWidget();
         page3->setObjectName(QStringLiteral("page3"));
         page3->setMinimumSize(QSize(800, 480));
         labelLogoRahamaatti_2 = new QLabel(page3);
         labelLogoRahamaatti_2->setObjectName(QStringLiteral("labelLogoRahamaatti_2"));
-        labelLogoRahamaatti_2->setGeometry(QRect(320, 10, 201, 41));
+        labelLogoRahamaatti_2->setGeometry(QRect(260, 10, 261, 41));
         labelLogoRahamaatti_2->setFont(font);
         labelLogoRahamaatti_2->setAlignment(Qt::AlignCenter);
         labelLogoTilinSaldo = new QLabel(page3);
         labelLogoTilinSaldo->setObjectName(QStringLiteral("labelLogoTilinSaldo"));
-        labelLogoTilinSaldo->setGeometry(QRect(360, 70, 131, 21));
+        labelLogoTilinSaldo->setGeometry(QRect(330, 60, 131, 21));
         QFont font3;
         font3.setPointSize(20);
         font3.setBold(false);
@@ -160,7 +164,10 @@ public:
         labelLogoTilinSaldo->setFont(font3);
         labelTilinSaldoTiedot = new QLabel(page3);
         labelTilinSaldoTiedot->setObjectName(QStringLiteral("labelTilinSaldoTiedot"));
-        labelTilinSaldoTiedot->setGeometry(QRect(370, 120, 321, 61));
+        labelTilinSaldoTiedot->setGeometry(QRect(250, 110, 321, 61));
+        QFont font4;
+        font4.setPointSize(16);
+        labelTilinSaldoTiedot->setFont(font4);
         pushButton_2_Peruuta = new QPushButton(page3);
         pushButton_2_Peruuta->setObjectName(QStringLiteral("pushButton_2_Peruuta"));
         pushButton_2_Peruuta->setGeometry(QRect(690, 400, 75, 23));
@@ -170,15 +177,15 @@ public:
         page4->setMinimumSize(QSize(800, 480));
         labelLogoRahamaatti_3 = new QLabel(page4);
         labelLogoRahamaatti_3->setObjectName(QStringLiteral("labelLogoRahamaatti_3"));
-        labelLogoRahamaatti_3->setGeometry(QRect(320, 10, 201, 41));
+        labelLogoRahamaatti_3->setGeometry(QRect(260, 10, 261, 41));
         labelLogoRahamaatti_3->setFont(font);
         labelLogoRahamaatti_3->setAlignment(Qt::AlignCenter);
         label = new QLabel(page4);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(270, 60, 311, 41));
-        QFont font4;
-        font4.setPointSize(20);
-        label->setFont(font4);
+        QFont font5;
+        font5.setPointSize(20);
+        label->setFont(font5);
         pushButton_20e = new QPushButton(page4);
         pushButton_20e->setObjectName(QStringLiteral("pushButton_20e"));
         pushButton_20e->setGeometry(QRect(230, 130, 75, 23));
@@ -209,33 +216,33 @@ public:
         page5->setMinimumSize(QSize(800, 480));
         labelLogoRahamaatti_4 = new QLabel(page5);
         labelLogoRahamaatti_4->setObjectName(QStringLiteral("labelLogoRahamaatti_4"));
-        labelLogoRahamaatti_4->setGeometry(QRect(320, 10, 201, 41));
+        labelLogoRahamaatti_4->setGeometry(QRect(260, 10, 261, 41));
         labelLogoRahamaatti_4->setFont(font);
         labelLogoRahamaatti_4->setAlignment(Qt::AlignCenter);
         label_2LogoTilitapahtumat = new QLabel(page5);
         label_2LogoTilitapahtumat->setObjectName(QStringLiteral("label_2LogoTilitapahtumat"));
-        label_2LogoTilitapahtumat->setGeometry(QRect(330, 60, 181, 31));
-        label_2LogoTilitapahtumat->setFont(font4);
-        label_3_Tilitapahtumat = new QLabel(page5);
-        label_3_Tilitapahtumat->setObjectName(QStringLiteral("label_3_Tilitapahtumat"));
-        label_3_Tilitapahtumat->setGeometry(QRect(260, 110, 341, 301));
+        label_2LogoTilitapahtumat->setGeometry(QRect(280, 50, 211, 41));
+        label_2LogoTilitapahtumat->setFont(font5);
         pushButton_Peruuta_P5 = new QPushButton(page5);
         pushButton_Peruuta_P5->setObjectName(QStringLiteral("pushButton_Peruuta_P5"));
         pushButton_Peruuta_P5->setGeometry(QRect(690, 400, 75, 23));
+        tableViewTilitapahtumat = new QTableView(page5);
+        tableViewTilitapahtumat->setObjectName(QStringLiteral("tableViewTilitapahtumat"));
+        tableViewTilitapahtumat->setGeometry(QRect(80, 100, 581, 291));
         stackedWidget->addWidget(page5);
         page6 = new QWidget();
         page6->setObjectName(QStringLiteral("page6"));
         labelLogoRahamaatti_5 = new QLabel(page6);
         labelLogoRahamaatti_5->setObjectName(QStringLiteral("labelLogoRahamaatti_5"));
-        labelLogoRahamaatti_5->setGeometry(QRect(320, 10, 201, 41));
+        labelLogoRahamaatti_5->setGeometry(QRect(260, 10, 261, 41));
         labelLogoRahamaatti_5->setFont(font);
         labelLogoRahamaatti_5->setAlignment(Qt::AlignCenter);
         label_2 = new QLabel(page6);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(330, 60, 181, 31));
-        QFont font5;
-        font5.setPointSize(18);
-        label_2->setFont(font5);
+        label_2->setGeometry(QRect(280, 60, 231, 31));
+        QFont font6;
+        font6.setPointSize(18);
+        label_2->setFont(font6);
         pushButton_Peruuta_P5_2 = new QPushButton(page6);
         pushButton_Peruuta_P5_2->setObjectName(QStringLiteral("pushButton_Peruuta_P5_2"));
         pushButton_Peruuta_P5_2->setGeometry(QRect(690, 400, 75, 23));
@@ -244,20 +251,30 @@ public:
         page4_1->setObjectName(QStringLiteral("page4_1"));
         labelLogoRahamaatti_6 = new QLabel(page4_1);
         labelLogoRahamaatti_6->setObjectName(QStringLiteral("labelLogoRahamaatti_6"));
-        labelLogoRahamaatti_6->setGeometry(QRect(320, 10, 201, 41));
+        labelLogoRahamaatti_6->setGeometry(QRect(260, 10, 261, 41));
         labelLogoRahamaatti_6->setFont(font);
         labelLogoRahamaatti_6->setAlignment(Qt::AlignCenter);
         label_NostitRahaa = new QLabel(page4_1);
         label_NostitRahaa->setObjectName(QStringLiteral("label_NostitRahaa"));
         label_NostitRahaa->setGeometry(QRect(240, 160, 371, 51));
-        QFont font6;
-        font6.setPointSize(14);
-        label_NostitRahaa->setFont(font6);
+        QFont font7;
+        font7.setPointSize(14);
+        label_NostitRahaa->setFont(font7);
+        pushButton_Peruuta_P4_1 = new QPushButton(page4_1);
+        pushButton_Peruuta_P4_1->setObjectName(QStringLiteral("pushButton_Peruuta_P4_1"));
+        pushButton_Peruuta_P4_1->setGeometry(QRect(690, 400, 75, 23));
+        pushButtonKirjauduUlos4_1 = new QPushButton(page4_1);
+        pushButtonKirjauduUlos4_1->setObjectName(QStringLiteral("pushButtonKirjauduUlos4_1"));
+        pushButtonKirjauduUlos4_1->setGeometry(QRect(374, 400, 101, 23));
+        labelLaskuriKirjauduUlos = new QLabel(page4_1);
+        labelLaskuriKirjauduUlos->setObjectName(QStringLiteral("labelLaskuriKirjauduUlos"));
+        labelLaskuriKirjauduUlos->setGeometry(QRect(320, 250, 221, 71));
+        labelLaskuriKirjauduUlos->setFont(font5);
         stackedWidget->addWidget(page4_1);
         bankSimulMainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(bankSimulMainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 800, 21));
+        menuBar->setGeometry(QRect(0, 0, 800, 26));
         bankSimulMainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(bankSimulMainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -268,7 +285,7 @@ public:
 
         retranslateUi(bankSimulMainWindow);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(bankSimulMainWindow);
@@ -302,13 +319,15 @@ public:
         pushButtonVaihdaValuutta->setText(QApplication::translate("bankSimulMainWindow", "Vaihda valuutta", Q_NULLPTR));
         labelLogoRahamaatti_4->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
         label_2LogoTilitapahtumat->setText(QApplication::translate("bankSimulMainWindow", "Tilitapahtumat", Q_NULLPTR));
-        label_3_Tilitapahtumat->setText(QString());
         pushButton_Peruuta_P5->setText(QApplication::translate("bankSimulMainWindow", "Peruuta", Q_NULLPTR));
         labelLogoRahamaatti_5->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
         label_2->setText(QApplication::translate("bankSimulMainWindow", "Vaihda valuuttaa", Q_NULLPTR));
         pushButton_Peruuta_P5_2->setText(QApplication::translate("bankSimulMainWindow", "Peruuta", Q_NULLPTR));
         labelLogoRahamaatti_6->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
         label_NostitRahaa->setText(QString());
+        pushButton_Peruuta_P4_1->setText(QApplication::translate("bankSimulMainWindow", "Paluu", Q_NULLPTR));
+        pushButtonKirjauduUlos4_1->setText(QApplication::translate("bankSimulMainWindow", "Kirjaudu Ulos", Q_NULLPTR));
+        labelLaskuriKirjauduUlos->setText(QString());
     } // retranslateUi
 
 };

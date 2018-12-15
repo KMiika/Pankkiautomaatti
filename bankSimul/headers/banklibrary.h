@@ -1,8 +1,9 @@
 #ifndef BANKLIBRARY_H
 #define BANKLIBRARY_H
 
-#include "banklibrary_global.h"
+#include "headers/banklibrary_global.h"
 #include <QDebug>
+#include <QString>
 
 class BANKLIBRARYSHARED_EXPORT BankLibrary
 {
@@ -11,10 +12,11 @@ public:
     BankLibrary();
     void saldoPainettu();
     void katteenTarkistus();
-    void nostoSummanValinta(int value);
+    void nostoSummanValinta(QString value);
+    int getVeloitaSumma();
 
+private:
     int veloitaSumma;
-    int value;
 };
 
 #endif // BANKLIBRARY_H

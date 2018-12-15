@@ -8,6 +8,25 @@
 #include <QString>
 #include "dbconnect_global.h"
 
+#include <QSqlQueryModel>
+#include <QWidget>
+#include <QApplication>
+#include <QtWidgets>
+#include <QtSql>
+
+/*#include <QMessageBox>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QSqlQuery>
+#include <QDebug>
+#include <QWidget>
+#include <QApplication>
+#include <QtWidgets>
+#include <QtSql>
+#include <QDebug>
+#include <QSqlQuery>
+#include <QSqlQueryModel>*/
+
 class DBCONNECTSHARED_EXPORT DBConnect
 {
 
@@ -24,12 +43,15 @@ public:
     void haeSaldo();
     //Veloittaa käyttäjän tililtä kyseisen summan
     void veloitaSumma(int veloitettavaSumma);
+    //Palauttaa QTableView-luokan oliolle modellin. Asetetaan näkymään käyttäjälle setModel()-aliohjelmalla.
+    QSqlQueryModel* haeTilitapahtumat();
+    //Palauttaa tilillä olevan saldon.
+    double getSaldo();
 
 
     //---------------------------------------------
     //Koodia debugausta varten!
     void suoritaKysely(QString kayttajanKysely);
-    double getSaldo();
     int getPinKoodi();
     QString getKortinNro();
     void setKortinNro(QString value);
