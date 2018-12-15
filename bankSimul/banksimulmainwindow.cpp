@@ -3,7 +3,11 @@
 #include "banksimulmainwindow.h"
 #include "ui_banksimulmainwindow.h"
 #include "headers/dbconnect.h"
+<<<<<<< Updated upstream
 #include "headers/ui_nappisform.h"
+=======
+#include "headers/nappis.h"
+>>>>>>> Stashed changes
 
 
 bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :

@@ -36,8 +36,73 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
+    <widget class="QWidget" name="IdlePage">
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>10</y>
+        <width>531</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="labelLogoRahamaatti_7">
+         <property name="font">
+          <font>
+           <pointsize>22</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>RAHAMAATTI</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelTervetuloa">
+         <property name="font">
+          <font>
+           <pointsize>22</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>TERVETULOA</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelTextSyotaKortti">
+         <property name="font">
+          <font>
+           <pointsize>22</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>SYÖTÄ PANKKIKORTTI</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
     <widget class="QWidget" name="page1">
      <property name="minimumSize">
       <size>
@@ -45,58 +110,12 @@
        <height>480</height>
       </size>
      </property>
-     <widget class="QLabel" name="labelTextSyotaKortti">
-      <property name="geometry">
-       <rect>
-        <x>180</x>
-        <y>80</y>
-        <width>441</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>22</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>SYÖTÄ PANKKIKORTTI</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelTervetuloa">
-      <property name="geometry">
-       <rect>
-        <x>260</x>
-        <y>0</y>
-        <width>251</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>22</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>TERVETULOA</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
      <widget class="QLabel" name="labelPinKoodi">
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>230</y>
-        <width>181</width>
+        <y>120</y>
+        <width>271</width>
         <height>31</height>
        </rect>
       </property>
@@ -112,7 +131,7 @@
        <enum>QFrame::Box</enum>
       </property>
       <property name="text">
-       <string>Syötä tähän PIN-Koodisi</string>
+       <string>Syötä PIN-Koodisi</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -121,8 +140,8 @@
      <widget class="QPushButton" name="pushButton_2_KirjauduSisaan">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>230</y>
+        <x>560</x>
+        <y>120</y>
         <width>111</width>
         <height>31</height>
        </rect>
@@ -136,6 +155,29 @@
       </property>
       <property name="text">
        <string>Kirjaudu sisään</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelLogoRahamaatti_8">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>261</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>RAHAMAATTI</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>

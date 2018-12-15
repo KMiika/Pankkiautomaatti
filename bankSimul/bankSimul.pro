@@ -18,10 +18,17 @@ TEMPLATE = app
 # Tämän sielunelämästä ei ikinä tiedä. Mikäli valittaa dll patheista buildissa. Siirrä kommentit ylempiin libs kohtiin ja buildaa kerran suoralla pathilla ja sen jälkeen väännä
 # takaisin relatiiviseen viitaukseen niin toimii!
 
+<<<<<<< Updated upstream
 LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/BankLibrary.dll"
 LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/DBConnect.dll"
 LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/Nappis.dll"
 LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/rfidDLL.dll"
+=======
+LIBS += "C:\BankSimul\Pankkiautomaatti\bankSimul\dll\BankLibrary.dll"
+LIBS += "C:\BankSimul\Pankkiautomaatti\bankSimul\dll\DBConnect.dll"
+LIBS += "C:\BankSimul\Pankkiautomaatti\bankSimul\dll\Nappis.dll"
+LIBS += "C:\BankSimul\Pankkiautomaatti\bankSimul\dll\rfidDLL.dll"
+>>>>>>> Stashed changes
 
 
 # The following define makes your compiler emit warnings if you use

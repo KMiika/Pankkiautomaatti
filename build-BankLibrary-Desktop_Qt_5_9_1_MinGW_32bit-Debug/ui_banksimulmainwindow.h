@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'banksimulmainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.11.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,9 +10,7 @@
 #define UI_BANKSIMULMAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -22,7 +20,6 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableView>
 #include <QtWidgets/QToolBar>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -32,16 +29,11 @@ class Ui_bankSimulMainWindow
 public:
     QWidget *centralWidget;
     QStackedWidget *stackedWidget;
-    QWidget *IdlePage;
-    QWidget *verticalLayoutWidget;
-    QVBoxLayout *verticalLayout;
-    QLabel *labelLogoRahamaatti_7;
-    QLabel *labelTervetuloa;
-    QLabel *labelTextSyotaKortti;
     QWidget *page1;
+    QLabel *labelTextSyotaKortti;
+    QLabel *labelTervetuloa;
     QLabel *labelPinKoodi;
     QPushButton *pushButton_2_KirjauduSisaan;
-    QLabel *labelLogoRahamaatti_8;
     QWidget *page2;
     QLabel *labelLogoRahamaatti;
     QPushButton *pushButtonNostaRahaa;
@@ -95,48 +87,26 @@ public:
         stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
         stackedWidget->setGeometry(QRect(0, 0, 800, 480));
         stackedWidget->setMinimumSize(QSize(800, 480));
-        IdlePage = new QWidget();
-        IdlePage->setObjectName(QStringLiteral("IdlePage"));
-        verticalLayoutWidget = new QWidget(IdlePage);
-        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(140, 10, 531, 261));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout->setSpacing(6);
-        verticalLayout->setContentsMargins(11, 11, 11, 11);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        labelLogoRahamaatti_7 = new QLabel(verticalLayoutWidget);
-        labelLogoRahamaatti_7->setObjectName(QStringLiteral("labelLogoRahamaatti_7"));
+        page1 = new QWidget();
+        page1->setObjectName(QStringLiteral("page1"));
+        page1->setMinimumSize(QSize(800, 480));
+        labelTextSyotaKortti = new QLabel(page1);
+        labelTextSyotaKortti->setObjectName(QStringLiteral("labelTextSyotaKortti"));
+        labelTextSyotaKortti->setGeometry(QRect(180, 80, 441, 91));
         QFont font;
         font.setPointSize(22);
         font.setBold(true);
         font.setWeight(75);
-        labelLogoRahamaatti_7->setFont(font);
-        labelLogoRahamaatti_7->setAlignment(Qt::AlignCenter);
-
-        verticalLayout->addWidget(labelLogoRahamaatti_7);
-
-        labelTervetuloa = new QLabel(verticalLayoutWidget);
-        labelTervetuloa->setObjectName(QStringLiteral("labelTervetuloa"));
-        labelTervetuloa->setFont(font);
-        labelTervetuloa->setAlignment(Qt::AlignCenter);
-
-        verticalLayout->addWidget(labelTervetuloa);
-
-        labelTextSyotaKortti = new QLabel(verticalLayoutWidget);
-        labelTextSyotaKortti->setObjectName(QStringLiteral("labelTextSyotaKortti"));
         labelTextSyotaKortti->setFont(font);
         labelTextSyotaKortti->setAlignment(Qt::AlignCenter);
-
-        verticalLayout->addWidget(labelTextSyotaKortti);
-
-        stackedWidget->addWidget(IdlePage);
-        page1 = new QWidget();
-        page1->setObjectName(QStringLiteral("page1"));
-        page1->setMinimumSize(QSize(800, 480));
+        labelTervetuloa = new QLabel(page1);
+        labelTervetuloa->setObjectName(QStringLiteral("labelTervetuloa"));
+        labelTervetuloa->setGeometry(QRect(260, 0, 251, 61));
+        labelTervetuloa->setFont(font);
+        labelTervetuloa->setAlignment(Qt::AlignCenter);
         labelPinKoodi = new QLabel(page1);
         labelPinKoodi->setObjectName(QStringLiteral("labelPinKoodi"));
-        labelPinKoodi->setGeometry(QRect(260, 120, 271, 31));
+        labelPinKoodi->setGeometry(QRect(260, 230, 181, 31));
         QFont font1;
         font1.setPointSize(12);
         labelPinKoodi->setFont(font1);
@@ -145,17 +115,12 @@ public:
         labelPinKoodi->setAlignment(Qt::AlignCenter);
         pushButton_2_KirjauduSisaan = new QPushButton(page1);
         pushButton_2_KirjauduSisaan->setObjectName(QStringLiteral("pushButton_2_KirjauduSisaan"));
-        pushButton_2_KirjauduSisaan->setGeometry(QRect(560, 120, 111, 31));
+        pushButton_2_KirjauduSisaan->setGeometry(QRect(450, 230, 111, 31));
         QFont font2;
         font2.setPointSize(10);
         font2.setBold(true);
         font2.setWeight(75);
         pushButton_2_KirjauduSisaan->setFont(font2);
-        labelLogoRahamaatti_8 = new QLabel(page1);
-        labelLogoRahamaatti_8->setObjectName(QStringLiteral("labelLogoRahamaatti_8"));
-        labelLogoRahamaatti_8->setGeometry(QRect(260, 10, 261, 41));
-        labelLogoRahamaatti_8->setFont(font);
-        labelLogoRahamaatti_8->setAlignment(Qt::AlignCenter);
         stackedWidget->addWidget(page1);
         page2 = new QWidget();
         page2->setObjectName(QStringLiteral("page2"));
@@ -318,7 +283,7 @@ public:
 
         retranslateUi(bankSimulMainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(bankSimulMainWindow);
@@ -326,42 +291,40 @@ public:
 
     void retranslateUi(QMainWindow *bankSimulMainWindow)
     {
-        bankSimulMainWindow->setWindowTitle(QApplication::translate("bankSimulMainWindow", "bankSimulMainWindow", Q_NULLPTR));
-        labelLogoRahamaatti_7->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
-        labelTervetuloa->setText(QApplication::translate("bankSimulMainWindow", "TERVETULOA", Q_NULLPTR));
-        labelTextSyotaKortti->setText(QApplication::translate("bankSimulMainWindow", "SY\303\226T\303\204 PANKKIKORTTI", Q_NULLPTR));
-        labelPinKoodi->setText(QApplication::translate("bankSimulMainWindow", "Sy\303\266t\303\244 PIN-Koodisi", Q_NULLPTR));
-        pushButton_2_KirjauduSisaan->setText(QApplication::translate("bankSimulMainWindow", "Kirjaudu sis\303\244\303\244n", Q_NULLPTR));
-        labelLogoRahamaatti_8->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
-        labelLogoRahamaatti->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
-        pushButtonNostaRahaa->setText(QApplication::translate("bankSimulMainWindow", "Nosta Rahaa", Q_NULLPTR));
-        pushButtonNaytaSaldo->setText(QApplication::translate("bankSimulMainWindow", "N\303\244yt\303\244 Saldo", Q_NULLPTR));
-        pushButtonNaytaTilitapahtumat->setText(QApplication::translate("bankSimulMainWindow", "N\303\244yt\303\244 Tilitapahtumat", Q_NULLPTR));
-        pushButtonKirjauduUlos->setText(QApplication::translate("bankSimulMainWindow", "Kirjaudu Ulos", Q_NULLPTR));
-        labelLogoRahamaatti_2->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
-        labelLogoTilinSaldo->setText(QApplication::translate("bankSimulMainWindow", "Tilisi Saldo", Q_NULLPTR));
+        bankSimulMainWindow->setWindowTitle(QApplication::translate("bankSimulMainWindow", "bankSimulMainWindow", nullptr));
+        labelTextSyotaKortti->setText(QApplication::translate("bankSimulMainWindow", "SY\303\226T\303\204 PANKKIKORTTI", nullptr));
+        labelTervetuloa->setText(QApplication::translate("bankSimulMainWindow", "TERVETULOA", nullptr));
+        labelPinKoodi->setText(QApplication::translate("bankSimulMainWindow", "Sy\303\266t\303\244 t\303\244h\303\244n PIN-Koodisi", nullptr));
+        pushButton_2_KirjauduSisaan->setText(QApplication::translate("bankSimulMainWindow", "Kirjaudu sis\303\244\303\244n", nullptr));
+        labelLogoRahamaatti->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", nullptr));
+        pushButtonNostaRahaa->setText(QApplication::translate("bankSimulMainWindow", "Nosta Rahaa", nullptr));
+        pushButtonNaytaSaldo->setText(QApplication::translate("bankSimulMainWindow", "N\303\244yt\303\244 Saldo", nullptr));
+        pushButtonNaytaTilitapahtumat->setText(QApplication::translate("bankSimulMainWindow", "N\303\244yt\303\244 Tilitapahtumat", nullptr));
+        pushButtonKirjauduUlos->setText(QApplication::translate("bankSimulMainWindow", "Kirjaudu Ulos", nullptr));
+        labelLogoRahamaatti_2->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", nullptr));
+        labelLogoTilinSaldo->setText(QApplication::translate("bankSimulMainWindow", "Tilisi Saldo", nullptr));
         labelTilinSaldoTiedot->setText(QString());
-        pushButton_2_Peruuta->setText(QApplication::translate("bankSimulMainWindow", "Peruuta", Q_NULLPTR));
-        labelLogoRahamaatti_3->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
-        label->setText(QApplication::translate("bankSimulMainWindow", "Valitse nostettava summa", Q_NULLPTR));
-        pushButton_20e->setText(QApplication::translate("bankSimulMainWindow", "20\342\202\254", Q_NULLPTR));
-        pushButton_2_40e->setText(QApplication::translate("bankSimulMainWindow", "40\342\202\254", Q_NULLPTR));
-        pushButton_4_60e->setText(QApplication::translate("bankSimulMainWindow", "60\342\202\254", Q_NULLPTR));
-        pushButton_5_80e->setText(QApplication::translate("bankSimulMainWindow", "80\342\202\254", Q_NULLPTR));
-        pushButton_6_100e->setText(QApplication::translate("bankSimulMainWindow", "100\342\202\254", Q_NULLPTR));
-        pushButton_7_MuuSumma->setText(QApplication::translate("bankSimulMainWindow", "Muu summa", Q_NULLPTR));
-        pushButton_Peruuta->setText(QApplication::translate("bankSimulMainWindow", "Peruuta", Q_NULLPTR));
-        pushButtonVaihdaValuutta->setText(QApplication::translate("bankSimulMainWindow", "Vaihda valuutta", Q_NULLPTR));
-        labelLogoRahamaatti_4->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
-        label_2LogoTilitapahtumat->setText(QApplication::translate("bankSimulMainWindow", "Tilitapahtumat", Q_NULLPTR));
-        pushButton_Peruuta_P5->setText(QApplication::translate("bankSimulMainWindow", "Peruuta", Q_NULLPTR));
-        labelLogoRahamaatti_5->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
-        label_2->setText(QApplication::translate("bankSimulMainWindow", "Vaihda valuuttaa", Q_NULLPTR));
-        pushButton_Peruuta_P5_2->setText(QApplication::translate("bankSimulMainWindow", "Peruuta", Q_NULLPTR));
-        labelLogoRahamaatti_6->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
+        pushButton_2_Peruuta->setText(QApplication::translate("bankSimulMainWindow", "Peruuta", nullptr));
+        labelLogoRahamaatti_3->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", nullptr));
+        label->setText(QApplication::translate("bankSimulMainWindow", "Valitse nostettava summa", nullptr));
+        pushButton_20e->setText(QApplication::translate("bankSimulMainWindow", "20\342\202\254", nullptr));
+        pushButton_2_40e->setText(QApplication::translate("bankSimulMainWindow", "40\342\202\254", nullptr));
+        pushButton_4_60e->setText(QApplication::translate("bankSimulMainWindow", "60\342\202\254", nullptr));
+        pushButton_5_80e->setText(QApplication::translate("bankSimulMainWindow", "80\342\202\254", nullptr));
+        pushButton_6_100e->setText(QApplication::translate("bankSimulMainWindow", "100\342\202\254", nullptr));
+        pushButton_7_MuuSumma->setText(QApplication::translate("bankSimulMainWindow", "Muu summa", nullptr));
+        pushButton_Peruuta->setText(QApplication::translate("bankSimulMainWindow", "Peruuta", nullptr));
+        pushButtonVaihdaValuutta->setText(QApplication::translate("bankSimulMainWindow", "Vaihda valuutta", nullptr));
+        labelLogoRahamaatti_4->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", nullptr));
+        label_2LogoTilitapahtumat->setText(QApplication::translate("bankSimulMainWindow", "Tilitapahtumat", nullptr));
+        pushButton_Peruuta_P5->setText(QApplication::translate("bankSimulMainWindow", "Peruuta", nullptr));
+        labelLogoRahamaatti_5->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", nullptr));
+        label_2->setText(QApplication::translate("bankSimulMainWindow", "Vaihda valuuttaa", nullptr));
+        pushButton_Peruuta_P5_2->setText(QApplication::translate("bankSimulMainWindow", "Peruuta", nullptr));
+        labelLogoRahamaatti_6->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", nullptr));
         label_NostitRahaa->setText(QString());
-        pushButton_Peruuta_P4_1->setText(QApplication::translate("bankSimulMainWindow", "Paluu", Q_NULLPTR));
-        pushButtonKirjauduUlos4_1->setText(QApplication::translate("bankSimulMainWindow", "Kirjaudu Ulos", Q_NULLPTR));
+        pushButton_Peruuta_P4_1->setText(QApplication::translate("bankSimulMainWindow", "Paluu", nullptr));
+        pushButtonKirjauduUlos4_1->setText(QApplication::translate("bankSimulMainWindow", "Kirjaudu Ulos", nullptr));
         labelLaskuriKirjauduUlos->setText(QString());
     } // retranslateUi
 
