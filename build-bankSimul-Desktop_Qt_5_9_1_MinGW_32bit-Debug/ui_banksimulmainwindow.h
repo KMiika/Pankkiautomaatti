@@ -274,7 +274,7 @@ public:
         bankSimulMainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(bankSimulMainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 800, 26));
+        menuBar->setGeometry(QRect(0, 0, 800, 21));
         bankSimulMainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(bankSimulMainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -285,7 +285,7 @@ public:
 
         retranslateUi(bankSimulMainWindow);
 
-        stackedWidget->setCurrentIndex(4);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(bankSimulMainWindow);
