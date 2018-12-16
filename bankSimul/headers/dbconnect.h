@@ -48,7 +48,8 @@ public:
     //Palauttaa tilillä olevan saldon.
     double getSaldo();
     //Tarkastaa käyttäjän Pin-koodin.
-    bool tarkistaKortinPin();
+    void tarkistaKortinPin();
+    bool getKirjautunutSisaan();
 
 
     //---------------------------------------------
@@ -70,10 +71,11 @@ private:
     QString tiliNro;
     QString kortinNro; //0B003254CB / abcde12345
     int pinKoodi;
+    bool kirjautunutSisaan;
 
 public slots:
-    void vastaanotaPin(int value);
-    void vastaanotaKNro(QString value);
+    void DBCONNECTSHARED_EXPORT vastaanotaPin(int value);
+    void vastaanotaKNro(const QString &value);
 };
 
 #endif // DBCONNECT_H

@@ -4,6 +4,7 @@
 #include "ui_banksimulmainwindow.h"
 #include "headers/dbconnect.h"
 #include "headers/ui_nappisform.h"
+#include "headers/nappis.h"
 
 
 bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
@@ -11,7 +12,7 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
     ui(new Ui::bankSimulMainWindow)
 {
     ui->setupUi(this);
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(1);
     dbYhteys = new DBConnect("abcde12345", 1234);
     dbYhteys->yhdistaTietokantaan();
     nostonValinta = new BankLibrary;
@@ -25,7 +26,7 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
     //timer
     timer = new QTimer(this);
     this->connect(timer, SIGNAL(timeout()), this, SLOT(paivitaAika()));
-    //connect(RFID,SIGNAL(lahetaCardSerialNumber(QString)),dbYhteys, SLOT(vastaanotaKNro(QString)));
+    //connect(RFID,&RfidDLL::lahetaCardSerialNumber,dbYhteys, &DBConnect::vastaanotaKNro);
    // this->connect(ui->pushButtonKirjauduUlos4_1, SIGNAL(clicked()), this, SIGNAL(kirjauduUlos()));
    //timer->start(1000);
 }
@@ -42,10 +43,23 @@ bankSimulMainWindow::~bankSimulMainWindow()
 
 void bankSimulMainWindow::on_pushButton_2_KirjauduSisaan_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    //ui->stackedWidget->setCurrentIndex(2);
+    dbYhteys->setKortinNro("");
+    if(RFID->getCardSerialNumber() != "")
+    {
+        dbYhteys->setKortinNro(RFID->getCardSerialNumber());
+        qDebug() << "Kortin nro: " << dbYhteys->getKortinNro();
+    }
+    dbYhteys->setPinKoodi(1234);
+    if(dbYhteys->getPinKoodi() != 0 && dbYhteys->getKortinNro() != "")
+    {
+        qDebug() << "if lauseessa!";
+        //qDebug () << dbYhteys->tarkistaKortinPin();
+    }
     timer->start(1000);
     Nappaimisto->close();
     qDebug() << RFID->getCardSerialNumber();
+    ui->stackedWidget->setCurrentIndex(2);
 
 }
 
