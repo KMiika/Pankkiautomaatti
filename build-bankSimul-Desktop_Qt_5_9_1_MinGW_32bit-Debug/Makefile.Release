@@ -1809,7 +1809,8 @@ release/banksimulmainwindow.o: ../bankSimul/banksimulmainwindow.cpp E:/Qt/Qt5.9.
 		E:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QStackedWidget \
 		E:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QStatusBar \
 		E:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QTableView \
-		E:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QToolBar
+		E:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QToolBar \
+		E:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/banksimulmainwindow.o ../bankSimul/banksimulmainwindow.cpp
 
 release/moc_banksimulmainwindow.o: release/moc_banksimulmainwindow.cpp 
