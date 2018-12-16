@@ -62,6 +62,8 @@ private slots:
 
     void on_pushButtonKirjauduUlos4_1_clicked();
 
+    void on_pushButton_clicked();
+
 signals:
     void kirjauduUlos();
 };

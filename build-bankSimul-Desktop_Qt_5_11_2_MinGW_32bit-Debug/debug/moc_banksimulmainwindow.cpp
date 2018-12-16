@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'banksimulmainwindow.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.1)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.11.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'banksimulmainwindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.9.1. It"
+#error "This file was generated using the moc from 5.11.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_bankSimulMainWindow_t {
-    QByteArrayData data[24];
-    char stringdata0[662];
+    QByteArrayData data[23];
+    char stringdata0[640];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -53,8 +53,7 @@ QT_MOC_LITERAL(18, 478, 27), // "on_pushButton_5_80e_clicked"
 QT_MOC_LITERAL(19, 506, 28), // "on_pushButton_6_100e_clicked"
 QT_MOC_LITERAL(20, 535, 32), // "on_pushButton_7_MuuSumma_clicked"
 QT_MOC_LITERAL(21, 568, 34), // "on_pushButton_Peruuta_P4_1_cl..."
-QT_MOC_LITERAL(22, 603, 36), // "on_pushButtonKirjauduUlos4_1_..."
-QT_MOC_LITERAL(23, 640, 21) // "on_pushButton_clicked"
+QT_MOC_LITERAL(22, 603, 36) // "on_pushButtonKirjauduUlos4_1_..."
 
     },
     "bankSimulMainWindow\0kirjauduUlos\0\0"
@@ -76,8 +75,7 @@ QT_MOC_LITERAL(23, 640, 21) // "on_pushButton_clicked"
     "on_pushButton_6_100e_clicked\0"
     "on_pushButton_7_MuuSumma_clicked\0"
     "on_pushButton_Peruuta_P4_1_clicked\0"
-    "on_pushButtonKirjauduUlos4_1_clicked\0"
-    "on_pushButton_clicked"
+    "on_pushButtonKirjauduUlos4_1_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -87,7 +85,7 @@ static const uint qt_meta_data_bankSimulMainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      22,   14, // methods
+      21,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -95,36 +93,34 @@ static const uint qt_meta_data_bankSimulMainWindow[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,  124,    2, 0x06 /* Public */,
+       1,    0,  119,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    0,  125,    2, 0x0a /* Public */,
-       4,    0,  126,    2, 0x0a /* Public */,
-       5,    0,  127,    2, 0x08 /* Private */,
-       6,    0,  128,    2, 0x08 /* Private */,
-       7,    0,  129,    2, 0x08 /* Private */,
-       8,    0,  130,    2, 0x08 /* Private */,
-       9,    0,  131,    2, 0x08 /* Private */,
-      10,    0,  132,    2, 0x08 /* Private */,
-      11,    0,  133,    2, 0x08 /* Private */,
-      12,    0,  134,    2, 0x08 /* Private */,
-      13,    0,  135,    2, 0x08 /* Private */,
-      14,    0,  136,    2, 0x08 /* Private */,
-      15,    0,  137,    2, 0x08 /* Private */,
-      16,    0,  138,    2, 0x08 /* Private */,
-      17,    0,  139,    2, 0x08 /* Private */,
-      18,    0,  140,    2, 0x08 /* Private */,
-      19,    0,  141,    2, 0x08 /* Private */,
-      20,    0,  142,    2, 0x08 /* Private */,
-      21,    0,  143,    2, 0x08 /* Private */,
-      22,    0,  144,    2, 0x08 /* Private */,
-      23,    0,  145,    2, 0x08 /* Private */,
+       3,    0,  120,    2, 0x0a /* Public */,
+       4,    0,  121,    2, 0x0a /* Public */,
+       5,    0,  122,    2, 0x08 /* Private */,
+       6,    0,  123,    2, 0x08 /* Private */,
+       7,    0,  124,    2, 0x08 /* Private */,
+       8,    0,  125,    2, 0x08 /* Private */,
+       9,    0,  126,    2, 0x08 /* Private */,
+      10,    0,  127,    2, 0x08 /* Private */,
+      11,    0,  128,    2, 0x08 /* Private */,
+      12,    0,  129,    2, 0x08 /* Private */,
+      13,    0,  130,    2, 0x08 /* Private */,
+      14,    0,  131,    2, 0x08 /* Private */,
+      15,    0,  132,    2, 0x08 /* Private */,
+      16,    0,  133,    2, 0x08 /* Private */,
+      17,    0,  134,    2, 0x08 /* Private */,
+      18,    0,  135,    2, 0x08 /* Private */,
+      19,    0,  136,    2, 0x08 /* Private */,
+      20,    0,  137,    2, 0x08 /* Private */,
+      21,    0,  138,    2, 0x08 /* Private */,
+      22,    0,  139,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -176,15 +172,13 @@ void bankSimulMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         case 18: _t->on_pushButton_7_MuuSumma_clicked(); break;
         case 19: _t->on_pushButton_Peruuta_P4_1_clicked(); break;
         case 20: _t->on_pushButtonKirjauduUlos4_1_clicked(); break;
-        case 21: _t->on_pushButton_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
-        void **func = reinterpret_cast<void **>(_a[1]);
         {
-            typedef void (bankSimulMainWindow::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&bankSimulMainWindow::kirjauduUlos)) {
+            using _t = void (bankSimulMainWindow::*)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&bankSimulMainWindow::kirjauduUlos)) {
                 *result = 0;
                 return;
             }
@@ -193,7 +187,7 @@ void bankSimulMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
     Q_UNUSED(_a);
 }
 
-const QMetaObject bankSimulMainWindow::staticMetaObject = {
+QT_INIT_METAOBJECT const QMetaObject bankSimulMainWindow::staticMetaObject = {
     { &QMainWindow::staticMetaObject, qt_meta_stringdata_bankSimulMainWindow.data,
       qt_meta_data_bankSimulMainWindow,  qt_static_metacall, nullptr, nullptr}
 };
@@ -208,7 +202,7 @@ void *bankSimulMainWindow::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_bankSimulMainWindow.stringdata0))
-        return static_cast<void*>(const_cast< bankSimulMainWindow*>(this));
+        return static_cast<void*>(this);
     return QMainWindow::qt_metacast(_clname);
 }
 
@@ -218,13 +212,13 @@ int bankSimulMainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 22)
+        if (_id < 21)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 22;
+        _id -= 21;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 22)
+        if (_id < 21)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 22;
+        _id -= 21;
     }
     return _id;
 }

@@ -12,13 +12,13 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
     ui(new Ui::bankSimulMainWindow)
 {
     ui->setupUi(this);
-    ui->stackedWidget->setCurrentIndex(1);
-    dbYhteys = new DBConnect("abcde12345", 1234);
+    ui->stackedWidget->setCurrentIndex(7);
+    dbYhteys = new DBConnect("0B003254CB", 1234);
     dbYhteys->yhdistaTietokantaan();
     nostonValinta = new BankLibrary;
     Nappaimisto = new NappisForm(this);
     Nappaimisto->move((this->width()/2-Nappaimisto->width()/2),260);//x 260
-    Nappaimisto->show();
+    //Nappaimisto->show();
     RFID = new RfidDLL;
 
     RFID->palautaPankkikortinNumeroKomponentti();
@@ -43,8 +43,8 @@ bankSimulMainWindow::~bankSimulMainWindow()
 
 void bankSimulMainWindow::on_pushButton_2_KirjauduSisaan_clicked()
 {
-    //ui->stackedWidget->setCurrentIndex(2);
-    dbYhteys->setKortinNro("");
+    ui->stackedWidget->setCurrentIndex(1);
+    //dbYhteys->setKortinNro("");
     if(RFID->getCardSerialNumber() != "")
     {
         dbYhteys->setKortinNro(RFID->getCardSerialNumber());
@@ -59,8 +59,6 @@ void bankSimulMainWindow::on_pushButton_2_KirjauduSisaan_clicked()
     timer->start(1000);
     Nappaimisto->close();
     qDebug() << RFID->getCardSerialNumber();
-    ui->stackedWidget->setCurrentIndex(2);
-
 }
 
 //*************************Päävalikon-napit**************************************
@@ -90,7 +88,7 @@ void bankSimulMainWindow::on_pushButtonNaytaTilitapahtumat_clicked()
 void bankSimulMainWindow::on_pushButtonKirjauduUlos_clicked()
 {
 
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(7);
     timer->stop();
 }
 
@@ -216,7 +214,7 @@ void bankSimulMainWindow::paivitaAika()
     if (!(--aikaaJaljella))
     {
         timer->stop();
-        ui->stackedWidget->setCurrentIndex(0);
+        ui->stackedWidget->setCurrentIndex(7);
 
     }
     //emit kirjauduUlos();
@@ -242,7 +240,13 @@ void bankSimulMainWindow::Timer()
 
 void bankSimulMainWindow::on_pushButtonKirjauduUlos4_1_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(7);
     timer->stop();
 
+}
+
+void bankSimulMainWindow::on_pushButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+    Nappaimisto->show();
 }
