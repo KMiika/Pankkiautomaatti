@@ -10,23 +10,24 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = bankSimul
 TEMPLATE = app
-#LIBS += "./dll/DBConnect.dll"
-#LIBS += "./dll/Nappis.dll"
-#LIBS += "./dll/rfidDLL.dll"
-#LIBS += "./dll/BankLibrary.dll"
+
+LIBS += "./dll/DBConnect.dll"
+LIBS += "./dll/Nappis.dll"
+LIBS += "./dll/rfidDLL.dll"
+LIBS += "./dll/BankLibrary.dll"
 
 # Tämän sielunelämästä ei ikinä tiedä. Mikäli valittaa dll patheista buildissa. Siirrä kommentit ylempiin libs kohtiin ja buildaa kerran suoralla pathilla ja sen jälkeen väännä
 # takaisin relatiiviseen viitaukseen niin toimii!
 
-#LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/BankLibrary.dll"
-#LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/DBConnect.dll"
-#LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/Nappis.dll"
-#LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/rfidDLL.dll"
+#LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/build-bankSimul-Desktop_Qt_5_9_1_MinGW_32bit-Debug/debug/DBConnect.dll"#"C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/BankLibrary.dll"
+#LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/build-bankSimul-Desktop_Qt_5_9_1_MinGW_32bit-Debug/debug/DBConnect.dll"#"C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/DBConnect.dll"
+#LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/build-bankSimul-Desktop_Qt_5_9_1_MinGW_32bit-Debug/debug/DBConnect.dll"#"C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/Nappis.dll"
+#LIBS += "C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/build-bankSimul-Desktop_Qt_5_9_1_MinGW_32bit-Debug/debug/DBConnect.dll"#"C:/Users/Juho/Desktop/TVT18KMO/OAMK/Vuosi 1/Syksy 18/Jakso 2/Ohjelmistokehityksen sovellusprojekti/Koodit/Sovellusprojekti/Pankkiautomaatti/bankSimul/dll/rfidDLL.dll"
 
-LIBS += "C:\Sovellusprojekti_pankkiautomaatti\Pankkiautomaatti\bankSimul\dll\BankLibrary.dll"
-LIBS += "C:\Sovellusprojekti_pankkiautomaatti\Pankkiautomaatti\bankSimul\dll\DBConnect.dll"
-LIBS += "C:\Sovellusprojekti_pankkiautomaatti\Pankkiautomaatti\bankSimul\dll\Nappis.dll"
-LIBS += "C:\Sovellusprojekti_pankkiautomaatti\Pankkiautomaatti\bankSimul\dll\rfidDLL.dll"
+#LIBS += "C:\Sovellusprojekti_pankkiautomaatti\Pankkiautomaatti\bankSimul\dll\BankLibrary.dll"
+#LIBS += "C:\Sovellusprojekti_pankkiautomaatti\Pankkiautomaatti\bankSimul\dll\DBConnect.dll"
+#LIBS += "C:\Sovellusprojekti_pankkiautomaatti\Pankkiautomaatti\bankSimul\dll\Nappis.dll"
+#LIBS += "C:\Sovellusprojekti_pankkiautomaatti\Pankkiautomaatti\bankSimul\dll\rfidDLL.dll"
 
 
 # The following define makes your compiler emit warnings if you use
