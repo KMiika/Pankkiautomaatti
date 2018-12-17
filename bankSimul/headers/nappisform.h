@@ -17,7 +17,8 @@ public:
 
 private:
     Ui::NappisForm *ui;
-    int muisti = 0000;
+    QString numero;
+    int muisti = 0;
     int paikka = 1;
     QString palautaTahti();
 
@@ -33,10 +34,10 @@ private slots:
     void on_numButton9_clicked();
     void on_numButton0_clicked();
     void on_numButtonC_clicked();
-    //void on_numButtonOk_clicked();
+    void on_numButtonOk_clicked();
 
 signals:
-    void nappisOkPainettu();
+    void nappisOkPainettu(int);
 };
 
 #endif // NAPPISFORM_H

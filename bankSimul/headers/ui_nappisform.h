@@ -25,7 +25,7 @@ class Ui_NappisForm
 {
 public:
     QLabel *labelTesti;
-    QLabel *labelKoodi;
+    QLabel *label;
     QWidget *widget;
     QGridLayout *gridLayout;
     QPushButton *numButton8;
@@ -41,19 +41,18 @@ public:
     QPushButton *numButtonC;
     QPushButton *numButton5;
 
+
     void setupUi(QWidget *NappisForm)
     {
         if (NappisForm->objectName().isEmpty())
             NappisForm->setObjectName(QStringLiteral("NappisForm"));
-        NappisForm->resize(314, 325);
+        NappisForm->resize(374, 369);
         labelTesti = new QLabel(NappisForm);
         labelTesti->setObjectName(QStringLiteral("labelTesti"));
         labelTesti->setGeometry(QRect(130, 0, 51, 16));
-        labelKoodi = new QLabel(NappisForm);
-        labelKoodi->setObjectName(QStringLiteral("labelKoodi"));
-        labelKoodi->setGeometry(QRect(20, 20, 271, 43));
-        labelKoodi->setFrameShape(QFrame::Box);
-        labelKoodi->setAlignment(Qt::AlignCenter);
+        label = new QLabel(NappisForm);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(100, 320, 47, 13));
         widget = new QWidget(NappisForm);
         widget->setObjectName(QStringLiteral("widget"));
         widget->setGeometry(QRect(20, 90, 271, 201));
@@ -131,7 +130,7 @@ public:
     {
         NappisForm->setWindowTitle(QApplication::translate("NappisForm", "Form", Q_NULLPTR));
         labelTesti->setText(QApplication::translate("NappisForm", "TESTI", Q_NULLPTR));
-        labelKoodi->setText(QString());
+        label->setText(QApplication::translate("NappisForm", "Keijo", Q_NULLPTR));
         numButton8->setText(QApplication::translate("NappisForm", "8", Q_NULLPTR));
         numButton1->setText(QApplication::translate("NappisForm", "1", Q_NULLPTR));
         numButtonOk->setText(QApplication::translate("NappisForm", "Ok", Q_NULLPTR));
