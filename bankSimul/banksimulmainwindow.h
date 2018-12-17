@@ -65,7 +65,7 @@ private slots:
     void on_pushButton_clicked();
     void tarkastaTilinKate();
 
-    void on_stackedWidget_currentChanged(int arg1);
+
 
 signals:
     void kirjauduUlos();

@@ -22,6 +22,7 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
     RFID = new RfidDLL;
 
     RFID->palautaPankkikortinNumeroKomponentti();
+    //connect(ui->stackedWidget,SIGNAL(currentChanged(int)), this, SLOT(on_stackedWidget_currentChanged(int)));
 
     //timer
     timer = new QTimer(this);
@@ -29,6 +30,7 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
     //connect(RFID,SIGNAL(lahetaCardSerialNumber(QString)),dbYhteys, SLOT(vastaanotaKNro(QString)));
    // this->connect(ui->pushButtonKirjauduUlos4_1, SIGNAL(clicked()), this, SIGNAL(kirjauduUlos()));
    //timer->start(1000);
+    //ui->stackedWidget->setCurrentIndex(7);
 }
 
 bankSimulMainWindow::~bankSimulMainWindow()
@@ -96,6 +98,9 @@ void bankSimulMainWindow::on_pushButtonKirjauduUlos_clicked()
 
     ui->stackedWidget->setCurrentIndex(7);
     timer->stop();
+
+    dbYhteys->setKortinNro("a");
+    //qDebug() << dbYhteys->getKortinNro();
 }
 
 //Nosta Rahaa -> Vaihda Valuuttaa
@@ -233,6 +238,7 @@ void bankSimulMainWindow::on_pushButtonKirjauduUlos4_1_clicked()
 {
     ui->stackedWidget->setCurrentIndex(7);
     timer->stop();
+    dbYhteys->setKortinNro("a");
 
 }
 
@@ -261,22 +267,6 @@ void bankSimulMainWindow::tarkastaTilinKate()
     aikaaJaljella = 10;
     ui->stackedWidget->setCurrentIndex(6);
 
-    //qDebug()<<nostonValinta->getVeloitaSumma();
-}
 
-void bankSimulMainWindow::on_stackedWidget_currentChanged(int arg1)
-{
-    qDebug() << "***";
-    qDebug() << ui->stackedWidget->currentIndex();
-    qDebug() << "***";
-    if(arg1 == 7)
-    {
-        qDebug() << "if lausessa!asd";
-        while(dbYhteys->getKortinNro() == "")
-        {
-            RFID->palautaPankkikortinNumeroKomponentti();
-            dbYhteys->setKortinNro(RFID->getCardSerialNumber());
-        }
-        ui->stackedWidget->setCurrentIndex(0);
-    }
+    //qDebug()<<nostonValinta->getVeloitaSumma();
 }
