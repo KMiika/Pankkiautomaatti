@@ -43,7 +43,7 @@ bankSimulMainWindow::~bankSimulMainWindow()
 
 void bankSimulMainWindow::on_pushButton_2_KirjauduSisaan_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    //ui->stackedWidget->setCurrentIndex(1);
     //dbYhteys->setKortinNro("");
     if(RFID->getCardSerialNumber() != "")
     {
@@ -51,11 +51,16 @@ void bankSimulMainWindow::on_pushButton_2_KirjauduSisaan_clicked()
         qDebug() << "Kortin nro: ***" << dbYhteys->getKortinNro();
     }
     dbYhteys->setPinKoodi(1234);
-    if(dbYhteys->getPinKoodi() != 0 && dbYhteys->getKortinNro() != "")
+    if(dbYhteys->getPinKoodi() != 0 && dbYhteys->getKortinNro() != "" && dbYhteys->tarkistaKortinPin() == true )
     {
         qDebug() << "if lauseessa!";
         qDebug() << dbYhteys->palautaNro(5);
         //qDebug() << dbYhteys->palautaNroYksi();
+        ui->stackedWidget->setCurrentIndex(1);
+    }
+    else
+    {
+        ui->labelPinKoodi->setText("Virheellinen PIN!");
     }
     timer->start(1000);
     Nappaimisto->close();

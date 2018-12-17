@@ -48,7 +48,8 @@ public:
     //Palauttaa tilillä olevan saldon.
     double getSaldo();
     //Tarkastaa käyttäjän Pin-koodin.
-    void tarkistaKortinPin();
+    bool tarkistaKortinPin();
+    //void tarkistaKortinPin();
     int getKirjautunutSisaan();
     int palautaNroYksi();
     int palautaNro(int value);
@@ -63,7 +64,7 @@ public:
     void setPinKoodi(int value);
     //---------------------------------------------
 
-protected:
+
 
 
 private:
