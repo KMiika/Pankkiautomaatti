@@ -322,7 +322,7 @@ public:
 
         retranslateUi(bankSimulMainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(7);
 
 
         QMetaObject::connectSlotsByName(bankSimulMainWindow);

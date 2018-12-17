@@ -13,7 +13,7 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(7);
-    dbYhteys = new DBConnect("0B003254CB", 1234);
+    dbYhteys = new DBConnect("", 1234);
     dbYhteys->yhdistaTietokantaan();
     nostonValinta = new BankLibrary;
     Nappaimisto = new NappisForm(this);
@@ -26,7 +26,7 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
     //timer
     timer = new QTimer(this);
     this->connect(timer, SIGNAL(timeout()), this, SLOT(paivitaAika()));
-    //connect(RFID,&RfidDLL::lahetaCardSerialNumber,dbYhteys, &DBConnect::vastaanotaKNro);
+    //connect(RFID,SIGNAL(lahetaCardSerialNumber(QString)),dbYhteys, SLOT(vastaanotaKNro(QString)));
    // this->connect(ui->pushButtonKirjauduUlos4_1, SIGNAL(clicked()), this, SIGNAL(kirjauduUlos()));
    //timer->start(1000);
 }
@@ -238,6 +238,7 @@ void bankSimulMainWindow::on_pushButtonKirjauduUlos4_1_clicked()
 
 void bankSimulMainWindow::on_pushButton_clicked()
 {
+    dbYhteys->setKortinNro("0B003254CB");
     ui->stackedWidget->setCurrentIndex(0);
     Nappaimisto->show();
 }
@@ -261,4 +262,21 @@ void bankSimulMainWindow::tarkastaTilinKate()
     ui->stackedWidget->setCurrentIndex(6);
 
     //qDebug()<<nostonValinta->getVeloitaSumma();
+}
+
+void bankSimulMainWindow::on_stackedWidget_currentChanged(int arg1)
+{
+    qDebug() << "***";
+    qDebug() << ui->stackedWidget->currentIndex();
+    qDebug() << "***";
+    if(arg1 == 7)
+    {
+        qDebug() << "if lausessa!asd";
+        while(dbYhteys->getKortinNro() == "")
+        {
+            RFID->palautaPankkikortinNumeroKomponentti();
+            dbYhteys->setKortinNro(RFID->getCardSerialNumber());
+        }
+        ui->stackedWidget->setCurrentIndex(0);
+    }
 }
