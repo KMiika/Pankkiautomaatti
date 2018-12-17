@@ -274,4 +274,5 @@ void bankSimulMainWindow::testiNappisPin()
     qDebug() <<"Nappiksen slotti";
     Nappaimisto->close();
     //aikaaJaljella = 10;
+
 }
