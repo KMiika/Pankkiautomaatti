@@ -21,8 +21,13 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_NappisForm_t {
+<<<<<<< HEAD
     QByteArrayData data[15];
     char stringdata0[294];
+=======
+    QByteArrayData data[14];
+    char stringdata0[277];
+>>>>>>> master
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,6 +37,7 @@ struct qt_meta_stringdata_NappisForm_t {
 static const qt_meta_stringdata_NappisForm_t qt_meta_stringdata_NappisForm = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "NappisForm"
+<<<<<<< HEAD
 QT_MOC_LITERAL(1, 11, 16), // "nappisOkPainettu"
 QT_MOC_LITERAL(2, 28, 0), // ""
 QT_MOC_LITERAL(3, 29, 21), // "on_numButton1_clicked"
@@ -55,6 +61,30 @@ QT_MOC_LITERAL(14, 271, 22) // "on_numButtonOk_clicked"
     "on_numButton7_clicked\0on_numButton8_clicked\0"
     "on_numButton9_clicked\0on_numButton0_clicked\0"
     "on_numButtonC_clicked\0on_numButtonOk_clicked"
+=======
+QT_MOC_LITERAL(1, 11, 21), // "on_numButton1_clicked"
+QT_MOC_LITERAL(2, 33, 0), // ""
+QT_MOC_LITERAL(3, 34, 21), // "on_numButton2_clicked"
+QT_MOC_LITERAL(4, 56, 21), // "on_numButton3_clicked"
+QT_MOC_LITERAL(5, 78, 21), // "on_numButton4_clicked"
+QT_MOC_LITERAL(6, 100, 21), // "on_numButton5_clicked"
+QT_MOC_LITERAL(7, 122, 21), // "on_numButton6_clicked"
+QT_MOC_LITERAL(8, 144, 21), // "on_numButton7_clicked"
+QT_MOC_LITERAL(9, 166, 21), // "on_numButton8_clicked"
+QT_MOC_LITERAL(10, 188, 21), // "on_numButton9_clicked"
+QT_MOC_LITERAL(11, 210, 21), // "on_numButton0_clicked"
+QT_MOC_LITERAL(12, 232, 21), // "on_numButtonC_clicked"
+QT_MOC_LITERAL(13, 254, 22) // "on_numButtonOk_clicked"
+
+    },
+    "NappisForm\0on_numButton1_clicked\0\0"
+    "on_numButton2_clicked\0on_numButton3_clicked\0"
+    "on_numButton4_clicked\0on_numButton5_clicked\0"
+    "on_numButton6_clicked\0on_numButton7_clicked\0"
+    "on_numButton8_clicked\0on_numButton9_clicked\0"
+    "on_numButton0_clicked\0on_numButtonC_clicked\0"
+    "on_numButtonOk_clicked"
+>>>>>>> master
 };
 #undef QT_MOC_LITERAL
 
@@ -69,6 +99,7 @@ static const uint qt_meta_data_NappisForm[] = {
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
+<<<<<<< HEAD
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
@@ -91,6 +122,24 @@ static const uint qt_meta_data_NappisForm[] = {
  // signals: parameters
     QMetaType::Void, QMetaType::Int,    2,
 
+=======
+       0,       // signalCount
+
+ // slots: name, argc, parameters, tag, flags
+       1,    0,   74,    2, 0x08 /* Private */,
+       3,    0,   75,    2, 0x08 /* Private */,
+       4,    0,   76,    2, 0x08 /* Private */,
+       5,    0,   77,    2, 0x08 /* Private */,
+       6,    0,   78,    2, 0x08 /* Private */,
+       7,    0,   79,    2, 0x08 /* Private */,
+       8,    0,   80,    2, 0x08 /* Private */,
+       9,    0,   81,    2, 0x08 /* Private */,
+      10,    0,   82,    2, 0x08 /* Private */,
+      11,    0,   83,    2, 0x08 /* Private */,
+      12,    0,   84,    2, 0x08 /* Private */,
+      13,    0,   85,    2, 0x08 /* Private */,
+
+>>>>>>> master
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
@@ -114,6 +163,7 @@ void NappisForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         NappisForm *_t = static_cast<NappisForm *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
+<<<<<<< HEAD
         case 0: _t->nappisOkPainettu((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 1: _t->on_numButton1_clicked(); break;
         case 2: _t->on_numButton2_clicked(); break;
@@ -139,6 +189,22 @@ void NappisForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
                 return;
             }
         }
+=======
+        case 0: _t->on_numButton1_clicked(); break;
+        case 1: _t->on_numButton2_clicked(); break;
+        case 2: _t->on_numButton3_clicked(); break;
+        case 3: _t->on_numButton4_clicked(); break;
+        case 4: _t->on_numButton5_clicked(); break;
+        case 5: _t->on_numButton6_clicked(); break;
+        case 6: _t->on_numButton7_clicked(); break;
+        case 7: _t->on_numButton8_clicked(); break;
+        case 8: _t->on_numButton9_clicked(); break;
+        case 9: _t->on_numButton0_clicked(); break;
+        case 10: _t->on_numButtonC_clicked(); break;
+        case 11: _t->on_numButtonOk_clicked(); break;
+        default: ;
+        }
+>>>>>>> master
     }
 }
 
@@ -177,6 +243,7 @@ int NappisForm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     }
     return _id;
 }
+<<<<<<< HEAD
 
 // SIGNAL 0
 void NappisForm::nappisOkPainettu(int _t1)
@@ -184,5 +251,7 @@ void NappisForm::nappisOkPainettu(int _t1)
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
+=======
+>>>>>>> master
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

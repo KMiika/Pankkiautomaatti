@@ -15,7 +15,7 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(7);
-    dbYhteys = new DBConnect("0B003254CB", 1234);
+    dbYhteys = new DBConnect("", 1234);
     dbYhteys->yhdistaTietokantaan();
     nostonValinta = new BankLibrary;
     Nappaimisto = new NappisForm(this);
@@ -24,14 +24,19 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
     RFID = new RfidDLL;
 
     RFID->palautaPankkikortinNumeroKomponentti();
+    //connect(ui->stackedWidget,SIGNAL(currentChanged(int)), this, SLOT(on_stackedWidget_currentChanged(int)));
 
     //timer
     timer = new QTimer(this);
     this->connect(timer, SIGNAL(timeout()), this, SLOT(paivitaAika()));
-    //connect(RFID,&RfidDLL::lahetaCardSerialNumber,dbYhteys, &DBConnect::vastaanotaKNro);
+    //connect(RFID,SIGNAL(lahetaCardSerialNumber(QString)),dbYhteys, SLOT(vastaanotaKNro(QString)));
    // this->connect(ui->pushButtonKirjauduUlos4_1, SIGNAL(clicked()), this, SIGNAL(kirjauduUlos()));
    //timer->start(1000);
+<<<<<<< HEAD
     connect(Nappaimisto, SIGNAL(nappisOkPainettu(int)),this,SLOT(testiNappisPin()));
+=======
+    //ui->stackedWidget->setCurrentIndex(7);
+>>>>>>> master
 }
 
 bankSimulMainWindow::~bankSimulMainWindow()
@@ -98,6 +103,9 @@ void bankSimulMainWindow::on_pushButtonKirjauduUlos_clicked()
 {
     ui->stackedWidget->setCurrentIndex(7);
     timer->stop();
+
+    dbYhteys->setKortinNro("a");
+    //qDebug() << dbYhteys->getKortinNro();
 }
 
 //Nosta Rahaa -> Vaihda Valuuttaa
@@ -236,11 +244,13 @@ void bankSimulMainWindow::on_pushButtonKirjauduUlos4_1_clicked()
 {
     ui->stackedWidget->setCurrentIndex(7);
     timer->stop();
+    dbYhteys->setKortinNro("a");
 
 }
 
 void bankSimulMainWindow::on_pushButton_clicked()
 {
+    dbYhteys->setKortinNro("0B003254CB");
     ui->stackedWidget->setCurrentIndex(0);
     Nappaimisto->show();
 }
@@ -262,6 +272,7 @@ void bankSimulMainWindow::tarkastaTilinKate()
     Nappaimisto->close();
     aikaaJaljella = 10;
     ui->stackedWidget->setCurrentIndex(6);
+
 
     //qDebug()<<nostonValinta->getVeloitaSumma();
 }

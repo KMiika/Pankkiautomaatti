@@ -66,6 +66,8 @@ private slots:
     void tarkastaTilinKate();
     void testiNappisPin();
 
+
+
 signals:
     void kirjauduUlos();
 };
