@@ -35,6 +35,9 @@ private slots:
     void on_numButton0_clicked();
     void on_numButtonC_clicked();
     void on_numButtonOk_clicked();
+
+signals:
+    void nappisOkPainettu(int);
 };
 
 #endif // NAPPISFORM_H

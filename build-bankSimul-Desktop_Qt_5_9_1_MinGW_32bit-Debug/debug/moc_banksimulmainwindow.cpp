@@ -22,7 +22,11 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_bankSimulMainWindow_t {
     QByteArrayData data[26];
+<<<<<<< HEAD
     char stringdata0[690];
+=======
+    char stringdata0[695];
+>>>>>>> f7f87ee145c87d9e06e55398fbbe550fbcfa81c0
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -56,7 +60,11 @@ QT_MOC_LITERAL(21, 568, 34), // "on_pushButton_Peruuta_P4_1_cl..."
 QT_MOC_LITERAL(22, 603, 36), // "on_pushButtonKirjauduUlos4_1_..."
 QT_MOC_LITERAL(23, 640, 21), // "on_pushButton_clicked"
 QT_MOC_LITERAL(24, 662, 17), // "tarkastaTilinKate"
+<<<<<<< HEAD
 QT_MOC_LITERAL(25, 680, 9) // "testiSlot"
+=======
+QT_MOC_LITERAL(25, 680, 14) // "testiNappisPin"
+>>>>>>> f7f87ee145c87d9e06e55398fbbe550fbcfa81c0
 
     },
     "bankSimulMainWindow\0kirjauduUlos\0\0"
@@ -80,7 +88,11 @@ QT_MOC_LITERAL(25, 680, 9) // "testiSlot"
     "on_pushButton_Peruuta_P4_1_clicked\0"
     "on_pushButtonKirjauduUlos4_1_clicked\0"
     "on_pushButton_clicked\0tarkastaTilinKate\0"
+<<<<<<< HEAD
     "testiSlot"
+=======
+    "testiNappisPin"
+>>>>>>> f7f87ee145c87d9e06e55398fbbe550fbcfa81c0
 };
 #undef QT_MOC_LITERAL
 
@@ -185,7 +197,11 @@ void bankSimulMainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         case 20: _t->on_pushButtonKirjauduUlos4_1_clicked(); break;
         case 21: _t->on_pushButton_clicked(); break;
         case 22: _t->tarkastaTilinKate(); break;
+<<<<<<< HEAD
         case 23: _t->testiSlot(); break;
+=======
+        case 23: _t->testiNappisPin(); break;
+>>>>>>> f7f87ee145c87d9e06e55398fbbe550fbcfa81c0
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {

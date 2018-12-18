@@ -1,4 +1,6 @@
 #include <QtCore>
+#include <QObject>
+#include <QWidget>
 #include "headers/banklibrary.h"
 #include "banksimulmainwindow.h"
 #include "ui_banksimulmainwindow.h"
@@ -30,6 +32,7 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
     connect(RFID,&RfidDLL::testiSignal,this,&bankSimulMainWindow::testiSlot);
    // this->connect(ui->pushButtonKirjauduUlos4_1, SIGNAL(clicked()), this, SIGNAL(kirjauduUlos()));
    //timer->start(1000);
+    connect(Nappaimisto, SIGNAL(nappisOkPainettu(int)),this,SLOT(testiNappisPin()));
     //ui->stackedWidget->setCurrentIndex(7);
 }
 
@@ -95,7 +98,6 @@ void bankSimulMainWindow::on_pushButtonNaytaTilitapahtumat_clicked()
 
 void bankSimulMainWindow::on_pushButtonKirjauduUlos_clicked()
 {
-
     ui->stackedWidget->setCurrentIndex(7);
     timer->stop();
 
@@ -119,6 +121,7 @@ void bankSimulMainWindow::on_pushButton_2_Peruuta_clicked()
 //Rahan Nosto peruuta-nappi: page4
 void bankSimulMainWindow::on_pushButton_Peruuta_clicked()
 {
+    Nappaimisto->close();
     ui->stackedWidget->setCurrentIndex(1);
 }
 
@@ -275,4 +278,12 @@ void bankSimulMainWindow::testiSlot()
 {
     ui->stackedWidget->setCurrentIndex(0);
     Nappaimisto->show();
+void bankSimulMainWindow::testiNappisPin()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+    // #####Ei toimi vielä toi, mutta signaali tulee läpi nappikselta tähän.#####
+    // ui->labelPinKoodi->setText(" "+QString::number(Nappaimisto->muisti));
+    qDebug() <<"Nappiksen slotti";
+    Nappaimisto->close();
+    //aikaaJaljella = 10;
 }

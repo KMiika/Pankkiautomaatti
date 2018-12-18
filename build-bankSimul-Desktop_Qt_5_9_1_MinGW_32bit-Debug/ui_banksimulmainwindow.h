@@ -331,7 +331,7 @@ public:
     void retranslateUi(QMainWindow *bankSimulMainWindow)
     {
         bankSimulMainWindow->setWindowTitle(QApplication::translate("bankSimulMainWindow", "bankSimulMainWindow", Q_NULLPTR));
-        labelPinKoodi->setText(QApplication::translate("bankSimulMainWindow", "Sy\303\266t\303\244 PIN-Koodisi", Q_NULLPTR));
+        labelPinKoodi->setText(QString());
         pushButton_2_KirjauduSisaan->setText(QApplication::translate("bankSimulMainWindow", "Kirjaudu sis\303\244\303\244n", Q_NULLPTR));
         labelLogoRahamaatti_8->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));
         labelLogoRahamaatti->setText(QApplication::translate("bankSimulMainWindow", "RAHAMAATTI", Q_NULLPTR));

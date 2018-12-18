@@ -41,6 +41,7 @@ public:
     QPushButton *numButtonC;
     QPushButton *numButton5;
 
+
     void setupUi(QWidget *NappisForm)
     {
         if (NappisForm->objectName().isEmpty())
