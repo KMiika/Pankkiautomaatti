@@ -23,6 +23,7 @@ private:
 signals:
     void RFIDDLLSHARED_EXPORT signaaliRpSignaali();
     void RFIDDLLSHARED_EXPORT lahetaCardSerialNumber(const QString &value);
+    void testiSignal();
 
 public slots:
     void RFIDDLLSHARED_EXPORT rajapintaSignaali();

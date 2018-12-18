@@ -64,6 +64,7 @@ private slots:
 
     void on_pushButton_clicked();
     void tarkastaTilinKate();
+    void testiSlot();
 
 
 

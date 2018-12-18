@@ -27,7 +27,7 @@ bankSimulMainWindow::bankSimulMainWindow(QWidget *parent) :
     //timer
     timer = new QTimer(this);
     this->connect(timer, SIGNAL(timeout()), this, SLOT(paivitaAika()));
-    //connect(RFID,SIGNAL(lahetaCardSerialNumber(QString)),dbYhteys, SLOT(vastaanotaKNro(QString)));
+    connect(RFID,&RfidDLL::testiSignal,this,&bankSimulMainWindow::testiSlot);
    // this->connect(ui->pushButtonKirjauduUlos4_1, SIGNAL(clicked()), this, SIGNAL(kirjauduUlos()));
    //timer->start(1000);
     //ui->stackedWidget->setCurrentIndex(7);
@@ -269,4 +269,10 @@ void bankSimulMainWindow::tarkastaTilinKate()
 
 
     //qDebug()<<nostonValinta->getVeloitaSumma();
+}
+
+void bankSimulMainWindow::testiSlot()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+    Nappaimisto->show();
 }
